@@ -35,7 +35,8 @@ def server(input, output, session):
     @render.plot(alt="Binge Drinking Age-adjusted Prevalence Bar Chart")
     def bar_chart():
         overall_avg = df_copd['Data_Value'].mean()
-        selected_county_avg = df_copd[df_copd['LocationName'] == input.county()]['Data_Value'].mean()
+        selected_county_avg = df_copd[df_copd
+        ['LocationName'] == input.county()]['Data_Value'].mean()
 
         fig, ax = plt.subplots(figsize=(10, 6))
         ax.bar(['Selected County', 'Overall Average'], [selected_county_avg, overall_avg], color=['lightcoral', 'dodgerblue'])
@@ -47,4 +48,4 @@ def server(input, output, session):
         return fig
 
 
-app = App(app_ui, server)
+app = App(app_ui, server, debug=True)
