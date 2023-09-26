@@ -1,0 +1,7 @@
+pandas
+python-dotenv
+flask
+gunicorn
+matplotlib
+io
+base64

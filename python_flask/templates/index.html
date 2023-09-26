@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask COPD Occurances in TX, USA App</title>
+</head>
+<body>
+
+<h2>COPD occurances Age-adjusted Prevalence in TX by County</h2>
+
+<form method="post">
+    <select name="county" onchange="this.form.submit()">
+        {% for county in counties %}
+        <option value="{{ county }}" {% if county == selected_county %} selected {% endif %}>{{ county }}</option>
+        {% endfor %}
+    </select>
+</form>
+
+<img src="data:image/png;base64,{{ img }}" alt="COPD Occurances Visualization" />
+
+</body>
+</html>
+
+{% endblock %}
