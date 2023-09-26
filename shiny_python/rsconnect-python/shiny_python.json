@@ -1,0 +1,12 @@
+{
+    "https://api.shinyapps.io": {
+        "server_url": "https://api.shinyapps.io",
+        "filename": "/home/tzanouangeliki/datasci_4_web_viz/shiny_python",
+        "app_url": "https://z8hs6g-angeliki-tzanou.shinyapps.io/shiny_python/",
+        "app_id": 9999215,
+        "app_guid": null,
+        "title": "shiny_python",
+        "app_mode": "python-shiny",
+        "app_store_version": 1
+    }
+}
